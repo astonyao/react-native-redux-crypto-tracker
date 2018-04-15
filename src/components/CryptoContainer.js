@@ -5,17 +5,16 @@ import { View, Text } from 'react-native';
 import FetchCoinData from './../Actions/FetchCoinData';
 
 
-
 class CryptoContainer extends Component {
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.FetchCoinData();
     }
 
     render() {
         return (
             <View>
-                <Text>Crypto Container</Text>
+                <Text>Container</Text>
             </View>
         )
     }
@@ -25,7 +24,6 @@ function mapStateToProps(state) {
     return {
         crypto: state.crypto
     }
-
 }
 
 export default connect(mapStateToProps, { FetchCoinData })(CryptoContainer)
